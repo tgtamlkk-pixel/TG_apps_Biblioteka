@@ -114,15 +114,15 @@ const analysisData = {
   ]
 };
 const booksData = [
-  {title:"Анатомия истории",author:"Джон Труби",file:"anatomiya-istorii.pdf"},
-  {title:"Спасите котика!",author:"Блейк Снайдер",file:"spasite-kotika.pdf"},
-  {title:"Пиши, сокращай",author:"М. Ильяхов, Л. Сарычева",file:"pishi-sokrashchay.pdf"},
-  {title:"История на миллион",author:"Роберт Макки",file:"istoriya-na-million.pdf"},
-  {title:"Сценарий на миллион",author:"Линда Сигер",file:"scenariy-na-million.pdf"},
-  {title:"Путь героя",author:"Джозеф Кэмпбелл",file:"put-geroya.pdf"},
-  {title:"Игры, в которые играют люди",author:"Эрик Берн",file:"igry-lyudey.pdf"},
-  {title:"Психология влияния",author:"Роберт Чалдини",file:"psihologiya-vliyaniya.pdf"},
-  {title:"Как писать хорошо",author:"Уильям Зинсер",file:"kak-pisat-horosho.pdf"},
+  {title:"Анатомия истории",file:"anatomiya-istorii.pdf"},
+  {title:"Спасите котика",file:"spasite-kotika.pdf"},
+  {title:"Пиши, сокращай",file:"pishi-sokrashchay.pdf"},
+  {title:"От идеи до злодея",file:"ot-idei-do-zlodey.pdf"},
+  {title:"Мама у меня будет книга",file:"mama-y-meny-budet-kniga.pdf"},
+  {title:"Киносценарий",file:"kinoscenarii.pdf"},
+  {title:"История на миллион",file:"istoriya-na-million.pdf"},
+  {title:"Дорожная карта шоураннера",file:"dorojnay-karta.pdf"},
+  {title:"Сценарий телесериала",file:"scenarii-teleseriala.pdf"},
 ];
 
 const SECTIONS = [
@@ -204,7 +204,7 @@ function AnalysisSection(){
 function BooksSection(){
   return booksData.map((book,i)=>(<div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"14px 0",borderBottom:"1px solid rgba(255,255,255,0.04)"}}>
     <div style={{width:36,height:36,borderRadius:10,background:"linear-gradient(135deg,#D4A017,#B8860B)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:14,fontWeight:700,color:"#000",flexShrink:0}}>{i+1}</div>
-    <div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:600,color:"#fff"}}>{book.title}</div><div style={{fontSize:11,color:"rgba(255,255,255,0.4)"}}>{book.author}</div></div>
+    <div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:600,color:"#fff"}}>{book.title}</div></div>
     <a href={"./books/"+book.file} download style={{display:"flex",alignItems:"center",justifyContent:"center",width:36,height:36,borderRadius:10,background:"rgba(212,160,23,0.12)",border:"1px solid rgba(212,160,23,0.25)",textDecoration:"none",flexShrink:0,transition:"all 0.2s"}} title="Скачать PDF">
       <span style={{fontSize:16}}>📥</span>
     </a>
@@ -215,7 +215,7 @@ function OfferSection(){
     <div style={{fontSize:48,marginBottom:12}}>💎</div>
     <div style={{fontSize:16,fontWeight:700,color:"#fff",marginBottom:8}}>Оффер на 1 млн ₽</div>
     <div style={{fontSize:13,color:"rgba(255,255,255,0.5)",marginBottom:20,lineHeight:1.5}}>Готовый гайд по созданию оффера на миллион рублей</div>
-    <a href="https://drive.google.com/file/d/1_eP8OawtWijNUaLfvc9Yam583C_yHQ6X/view" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:8,padding:"14px 28px",borderRadius:14,background:"linear-gradient(135deg,#D4A017,#B8860B)",color:"#000",fontSize:14,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(212,160,23,0.3)"}}>
+    <a href="./books/offer-na-million.pdf" download style={{display:"inline-flex",alignItems:"center",gap:8,padding:"14px 28px",borderRadius:14,background:"linear-gradient(135deg,#D4A017,#B8860B)",color:"#000",fontSize:14,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(212,160,23,0.3)"}}>
       <span style={{fontSize:18}}>📥</span> Скачать PDF
     </a>
   </div>);
